@@ -4,11 +4,22 @@
     <meta charset="UTF-8">
     <title></title>
     <style>
-        body {
-            color: white;
-            background: #333;
+        * {
+            margin: 0;
+            padding: 0;
         }
 
+        body {
+            color: #fff;
+            font-size: 2em;
+            background-color: #eee;
+            font-family: 'Oswald', sans-serif;
+        }
+
+        h1 {
+            margin: 0.25em auto;
+            text-align: center;
+        }
 
         header, footer, section, nav, aside {
             background: #666;
@@ -16,36 +27,65 @@
             border-radius: 0.5em;
             margin: 0.5em auto;
             padding: 0.25em;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        header, footer, section#container {
+            max-width: 960px;
         }
 
         section#container {
             margin: 0 auto;
             padding: 0;
-            text-align: center;
         }
+
         section#principal, nav, aside {
             margin: 0.5em auto;
             padding: 0.25em;
-            display: inline-block;
-            width: 65%;
-            min-height: 300px;
+            text-align: center;
             max-width: 960px;
+            min-height: 300px;
+            display: inline-block;
             vertical-align: top;
+            width: 65%;
+            border: 1px solid #fff;
+            border-radius: 0.5em;
         }
 
         aside, nav {
             width: 13%;
         }
 
+        article, #principal header, #principal footer {
+            background: #aaa;
+            border: 1px solid #333;
+            border-radius: 0.5em;
+        }
+
+        /*
+         *
+         * Ajustamos el CSS para las pantallas entre 480 y 800 de ancho
+         *
+         */
         @media only screen and (min-width: 320px) and (max-width: 800px) {
             header, footer, section, nav, aside {
                 background: #ffaaaa;
             }
 
+            h1 { font-size: 1em; }
+
             section#principal, nav, aside {
+                display: block;
+                margin: 0.1em auto;
+                padding: 0.1em;
                 min-height: 10px;
                 min-width: 95%;
             }
+
         }
     </style>
 
