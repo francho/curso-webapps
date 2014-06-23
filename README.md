@@ -4,9 +4,10 @@ curso-webapps
 Material generado durante el curso de Webapps (junio 2014)
 
 
-Varios
+Herramientas
 ------
-- Herramientas ie - http://loc.modern.ie/es-es/virtualization-tools
+- Herramientas ie: http://loc.modern.ie/es-es/virtualization-tools
+- Validador W3C: validator.w3.org
 
 Editores
 --------
