@@ -6,7 +6,7 @@
 </head>
 <body>
 
-<p>Session storage: <spam id="sesionValue"></spam></p>
+<p>Session storage: <spam id="sessionValue"></spam></p>
 <p>Local storage: <spam id="localValue"></spam></p>
 
 <button onclick="addOne()">+1</button>
@@ -14,6 +14,7 @@
 <script>
     function displayCounters() {
         document.getElementById('localValue').innerHTML = localStorage.localNumber;
+        document.getElementById('sessionValue').innerHTML = sessionStorage.sessionNumber;
     }
 
     function addOne() {
@@ -23,15 +24,18 @@
         }
 
         var localNumber = localStorage.localNumber ? localStorage.localNumber : 0;
+        var sessionNumber = sessionStorage.sessionNumber ? sessionStorage.sessionNumber : 0;
 
         // Lo mismo pero con sessionStorage
 
 
         localStorage.setItem('localNumber', ++localNumber);
+        sessionStorage.setItem('sessionNumber', ++sessionNumber);
 
         displayCounters();
-
     }
+
+    document.onload(displayCounters());
 </script>
 
 </body>
