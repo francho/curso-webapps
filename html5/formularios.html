@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<form action="demo.php" method="get">
+    listas: <input list="perros">
+    <datalist id="perros">
+        <option value="Bichon Habanero"></option>
+        <option value="Galgo"></option>
+    </datalist>
+
+    <hr/>
+    texto con patrón de validación:
+    <input type="text" pattern="[A-Z]{3}" title="escribe tres letras mayúsculas">
+    <hr/>
+    texto: <input type="text" required="true">
+    <hr/>
+    texto con place holder: <input type="text" placeholder="escribe tu nombre">
+    color: <input type="color">
+
+    <hr/>
+    fecha: <input type="date">
+    <hr/>
+    date time local: <input type="datetime-local">
+    <hr/>
+    mes: <input type="month">
+    semana: <input type="week">
+    hora: <input type="time">
+    <hr/>
+    número: <input type="number">
+    números pares entre 0 y 10: <input type="number" min="0" max="10" step="2">
+    <hr/>
+    rango: <input type="range" min="1" max="100" name="rango">
+    <hr/>
+    search: <input type="search">
+    <hr/>
+    email: <input type="email">
+    <hr/>
+    teléfono: <input type="tel">
+    <hr/>
+    url: <input type="url">
+    <hr/>
+    keygen: <keygen></keygen>
+
+    <hr/>
+    <input type="submit" value="enviar" >
+</form>
+
+<form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+    <input type="number" id="a"> +
+    <input type="number" id="b"> =
+    <output name="x" for="a b"></output>
+</form>
+
+
+</body>
+</html>
