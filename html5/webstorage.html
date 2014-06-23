@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+
+<p>Session storage: <spam id="sesionValue"></spam></p>
+<p>Local storage: <spam id="localValue"></spam></p>
+
+<button onclick="addOne()">+1</button>
+
+<script>
+    function displayCounters() {
+        document.getElementById('localValue').innerHTML = localStorage.localNumber;
+    }
+
+    function addOne() {
+        if(typeof (Storage) == 'undefined') {
+            alert('Tu navegador no soporta storage');
+            return;
+        }
+
+        var localNumber = localStorage.localNumber ? localStorage.localNumber : 0;
+
+        // Lo mismo pero con sessionStorage
+
+
+        localStorage.setItem('localNumber', ++localNumber);
+
+        displayCounters();
+
+    }
+</script>
+
+</body>
+</html>
