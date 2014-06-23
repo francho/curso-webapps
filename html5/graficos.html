@@ -13,11 +13,19 @@
 <h1>SVG</h1>
 
 <svg width="200" height="300">
-    <polygon points="0,200,100,100,30,30,60,50"
-             style="fill:red;stroke:black;stroke-with:2"></polygon>
+    <polygon points="0,200,100,100,200,200,200,300,0,300"
+             style="fill:red;stroke:black;stroke-width:3;fill-rule:evenodd;"
+            />
+    <polygon points="80,300,120,300,120,230,80,230"
+             style="fill:white;stroke:black;stroke-width:2;fill-rule:evenodd;"/>
 
-    <polygon points="0,100,100,30,30,60,50,100"
-             style="fill:green;stroke:black;stroke-with:2"></polygon>
+
+    <circle cx="100" cy="170" r="30" fill="white" />
+
+
+    <circle cx="0" cy="50" r="30" fill="yellow">
+     <animate attributeName="cx" attributeType="XML" begin="0s" dur="5s" from="30" to="560" fill="freeze"></animate>
+    </circle>
 </svg>
 
 
@@ -32,20 +40,20 @@
     context.fillStyle = '#ff0000';
 
     context.beginPath();
-    context.arc(90,40,40, 0, 2*Math.PI);
+    context.arc(90, 40, 40, 0, 2 * Math.PI);
     context.stroke();
 
     context.fillStyle = "#ffff00"
-    context.fillRect(300,100,60,30);
+    context.fillRect(300, 100, 60, 30);
 
-    var gradient = context.createLinearGradient(0,0,0,200);
+    var gradient = context.createLinearGradient(0, 0, 0, 200);
     gradient.addColorStop(0, 'yellow');
     gradient.addColorStop(0.5, 'black');
     gradient.addColorStop(1, '#0ff0f0');
 
     context.fillStyle = gradient;
 
-    context.fillRect(100,50,60,130);
+    context.fillRect(100, 50, 60, 130);
 
     context.font = '30px Arial';
     context.fillText('Hello world', 50, 50);
