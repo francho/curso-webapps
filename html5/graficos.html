@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        #lienzo {
+            border: 1px gray dotted;
+        }
+    </style>
+</head>
+<body>
+<h1>Canvas</h1>
+
+<canvas width="500" height="300" id="lienzo"></canvas>
+
+<script>
+    var canvas = document.getElementById('lienzo');
+    var context = canvas.getContext('2d');
+
+    context.fillStyle = '#ff0000';
+
+    context.beginPath();
+    context.arc(90,40,40, 0, 2*Math.PI);
+    context.stroke();
+
+    context.fillStyle = "#ffff00"
+    context.fillRect(300,100,60,30);
+
+    var gradient = context.createLinearGradient(0,0,0,200);
+    gradient.addColorStop(0, 'yellow');
+    gradient.addColorStop(0.5, 'black');
+    gradient.addColorStop(1, '#0ff0f0');
+
+    context.fillStyle = gradient;
+
+    context.fillRect(100,50,60,130);
+
+    context.font = '30px Arial';
+    context.fillText('Hello world', 50, 50);
+
+</script>
+</body>
+</html>
