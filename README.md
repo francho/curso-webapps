@@ -47,3 +47,12 @@ Ejemplos
 --------
 - Canvas en 3D: http://seb.ly/demos/html5landscape.html
 - Proyecto de Google para demostrar la potencia de html5: http://www.html5rocks.com/es/
+
+Bibliografía recomendada (orientada a diseño)
+---------------------------------------------
+- http://www.amazon.com/The-Principles-Beautiful-Web-Design/dp/098057689X/
+- http://www.amazon.com/Detail-Typography-Jost-Hochuli/dp/0907259340/
+- http://www.amazon.com/HTML-CSS-Design-Build-Websites/dp/1118008189/
+- http://www.amazon.com/Designing-Interfaces-Jenifer-Tidwell/dp/1449379702/
+
+- http://www.smashingmagazine.com/
