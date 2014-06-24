@@ -9,14 +9,28 @@
 <h1>Titulo</h1>
 <h1>Otro titulo</h1>
 <div class="listado">
-
+    <img src="" id="imagen" onclick="alert('antes')">
 </div>
 
 <script>
-    var titulo = document.getElementsByTagName('h1');
+    var titulos = document.getElementsByTagName('h1');
+
+    var titulo = titulos[1];
+    titulo.innerHTML="otro titulo"
 
     console.log(titulo)
 
+    var imagen = document.getElementById('imagen');
+    imagen.src="http://www.heraldo.es/uploads/imagenes/4col/2014/06/24/_lafoto_5f97e929.jpg?471fb9c96d0005d1780bff9dd7cf721f";
+
+    imagen.onclick = function() {
+        var listado = document.getElementsByClassName('listado')[0];
+
+        var elemento = document.createElement('p');
+        elemento.innerHTML = 'has pulsado la imagen';
+
+        listado.appendChild(elemento);
+    };
 
 </script>
 
