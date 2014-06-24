@@ -57,3 +57,7 @@ Bibliografía recomendada (orientada a diseño)
 
 - http://www.smashingmagazine.com/
 - http://www.uxspain.com/
+
+- Guia de estilo de Android: http://developer.android.com/design/style
+
+- Herramienta de prototipado: http://pencil.evolus.vn/
