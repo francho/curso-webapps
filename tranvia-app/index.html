@@ -6,8 +6,30 @@
 </head>
 <body>
 
+<input type="search" id="query">
+<button onclick="loadParadas()">go</button>
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script>
-    var urlApi = 'http://www.zaragoza.es/api/recurso/urbanismo-infraestructuras/tranvia?start=0&rows=100&query=title%3D%22*' + query + '*%22&distance=500'
+
+    function loadParadas() {
+        var query = encodeURIComponent($('#query').val());
+        var urlApi = 'http://www.zaragoza.es/api/recurso/urbanismo-infraestructuras/tranvia?start=0&rows=100&query=title%3D%22*' + query + '*%22&distance=500'
+        $.ajax({
+            url     : urlApi,
+            dataType: 'json',
+            success : function(data) {
+                // TODO: mostrar la info (me la pasan en data)
+                console.log(data);
+            },
+            error   : function(error) {
+                // Mostrar lo que sea cuando haya un error
+            }
+        });
+
+    }
+
+
 
 </script>
 
