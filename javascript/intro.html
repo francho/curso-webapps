@@ -155,6 +155,41 @@
         // Tiene que invocar la funcion recibida pasando el parametro
         // La funcion que se pasa como parametro tiene que poner delante el texto "Hola..."
 
+        function diHola(nombre) {
+            console.log('diHola');
+            console.log('Hola ' + nombre);
+        };
+
+
+        function saluda(nombre) {
+            console.log('saluda');
+            diHola(nombre);
+        }
+        saluda('Rosa');
+
+        function saluda2(nombre, fn) {
+            console.log('saluda2');
+            fn(nombre);
+        }
+        saluda2('Maria', diHola);
+
+        function sayHi(name) {
+            console.log('Hi '+name);
+        }
+        saluda2('Maria', sayHi);
+
+        saluda2('José', function(nombre) {
+            console.log('Que pasa co ' + nombre);
+        });
+
+        // Expresiones regulares
+        var texto="En un lugar de la mancha de mancha...";
+
+        console.log(texto.match(/[a-z]{3}/g));
+
+
+
+
     </script>
 
 
