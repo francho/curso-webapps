@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script>
+
+
+        console.log([1, 3, 4, 5, 6]); // un array
+        console.log(5 + 10);
+        console.log("pepe");
+        console.log('pepe');
+        console.log(5e10);
+        console.log(1000);
+        console.log(3.14);
+
+        /*
+         comentario multilinea
+         */
+
+        // salida por consola
+        console.log('Hello world');
+
+        // Definición de un objeto
+        var objeto1 = {
+            nombre  : 'Pepe',
+            'edad'  : 12,
+            unMetodo: function() {
+                console.log('hi');
+            },
+            partes  : {
+                piernas: 2,
+                brazos : 2,
+                cabeza : 1
+            }
+        };
+        console.log(objeto1.nombre);
+        console.log(objeto1['nombre']);
+
+        var campo = 'dad';
+        console.log(objeto1[campo]);
+
+        objeto1.unMetodo();
+
+        console.log(objeto1.partes.piernas);
+
+        // Definición de variables
+        var a = 1, z = 3;
+        var b, c;
+        var d = e = f = 1;
+        console.log(b);
+        b = 10;
+        console.log(b);
+
+        // Operadores
+        console.log(a + z);
+        console.log(a - z);
+        console.log(a * z);
+        console.log(a / z);
+
+        console.log(-a);
+
+        console.log(++a);
+        console.log(a++);
+
+        console.log(--a);
+        console.log(a--);
+
+        a = 1;
+        console.log(a == 1);
+        console.log(a == "1");
+        console.log(a === "1");
+
+        console.log(a != 1);
+        console.log(a != "1");
+        console.log(a !== "1");
+
+        console.log(a > z);
+        console.log(a < z);
+        console.log(a <= z);
+        console.log(a >= z);
+
+        console.log("Frase \
+                 larga");
+
+        console.log('Frase' + ' larga');
+
+        var coleccion = ['uno', 'dos', 'tres', 'cuatro', 'cinco'];
+
+        for(var i = 0; i < coleccion.length; i++) {
+            console.log(coleccion[i]);
+        }
+
+        i = 0;
+        while(i < coleccion.length) {
+            console.log(coleccion[i++]);
+        }
+
+        i = 0;
+        do {
+            console.log(coleccion[i++]);
+        } while(i < coleccion.length);
+
+        // Para recorrer propiedades de los objetos
+        var perro = {
+            raza  : 'Bichon Habanero',
+            edad  : 3,
+            nombre: 'Frodo',
+            ladra : function() {
+                console.log('guau');
+            }
+        }
+
+        for(var atributo in perro) {
+            console.log(atributo + '= ' + perro[atributo]);
+        }
+
+        if(perro.nombre === 'Frodo') {
+            console.log('Ven Frodo');
+        } else {
+            console.log('vete chucho');
+        }
+
+        // Funciones
+
+        function miFuncion() {
+            console.log('miFuncion');
+        }
+        miFuncion();
+
+        var funcionAnonima = function() {
+            console.log('soy una funcion anonima');
+        };
+
+        funcionAnonima();
+
+        // Declaro una funcion anónima y la llamo
+        (function() {
+            console.log('soy una funcion anonima');
+        })();
+
+        function llamadora(numero, fn) {
+            console.log('llamadora');
+            fn(numero);
+        }
+        ;
+
+        llamadora(4, funcionAnonima);
+
+        llamadora(4, function(numero) {
+            console.log('Me has pasado el ' + numero);
+        });
+
+    </script>
+
+
+</head>
+<body>
+
+</body>
+</html>
