@@ -56,3 +56,4 @@ Bibliografía recomendada (orientada a diseño)
 - http://www.amazon.com/Designing-Interfaces-Jenifer-Tidwell/dp/1449379702/
 
 - http://www.smashingmagazine.com/
+- http://www.uxspain.com/
