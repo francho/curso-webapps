@@ -1,33 +1,111 @@
 <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/html">
 <head lang="en">
-    <meta charset="UTF-8">
-    <title></title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Tranvías de Zaragoza</title>
+    <link rel="stylesheet" href="foundation-5.3.0/css/foundation.css"/>
+    <script src="foundation-5.3.0/js/vendor/modernizr.js"></script>
+
+    <style>
+        body {
+            background: url("http://www.tranviasdezaragoza.es/tranvia-zgz/img/bg_slide.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover; /* For WebKit*/
+            -moz-background-size: cover; /* Mozilla*/
+            -o-background-size: cover; /* Opera*/
+            background-size: cover; /* Generic*/
+        }
+
+        #progress progress {
+            width: 100%;
+            color: red;
+        }
+
+        #progress div {
+            padding: 0;
+        }
+
+        .tranvia {
+            padding: 0.25em;
+        }
+
+        #paradas {
+            margin-top: 0.25em;
+        }
+
+        .parada {
+            margin: 0em auto;
+        }
+
+        .top-bar input[type="search"], .top-bar .button {
+            font-size: 0.77778rem;
+            position: relative;
+            top: 7px;
+        }
+
+        .top-bar input[type="search"] {
+            height: auto;
+            padding-top: 0.35rem;
+            padding-bottom: 0.35rem;
+            font-size: 0.75rem;
+        }
+
+        .alert-box {
+            margin: 3em;
+        }
+    </style>
 </head>
 <body>
 
-<h1>Tranvías de Zaragoza</h1>
+<div class="contain-to-grid sticky">
+    <nav class="top-bar" data-topbar data-options="sticky_on: large">
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="#">Tranvías de Zaragoza</a></h1>
+            </li>
+        </ul>
+        <section class="top-bar-section">
+            <ul class="right">
+                <li class="has-form">
+                    <div class="row collapse">
+                        <div class="large-8 small-9 columns">
+                            <input type="search" id="query" placeholder="parada">
+                        </div>
+                        <div class="large-4 small-3 columns">
+                            <a href="#" id="enviar" class="alert button expand">Search</a>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </section>
+    </nav>
+</div>
 
-<input type="search" id="query" placeholder="parada">
-<button id="enviar">go</button>
 
-<div id="progress">cargando...</div>
-<div id="errores"></div>
+<div id="progress" class="row">
+    <div class="small-12 medium-12 large-12 columns">
+        <progress></progress>
+    </div>
+</div>
+
 <div id="paradas"></div>
 
-<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+
+<script src="foundation-5.3.0/js/vendor/jquery.js"></script>
+<script src="foundation-5.3.0/js/foundation.min.js"></script>
 <script src="tranvias_app.js"></script>
 <script>
+    $(document).foundation();
     /*
      * API info -> http://www.zaragoza.es/docs-api/#!/tranvia/listar_get_0
      */
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         var app = new TranviasApp();
         app.init();
 
         $('#progress').hide();
-        $('#enviar').click( function() {
+        $('#enviar').click(function () {
             app.cargarParadas();
         });
     });
