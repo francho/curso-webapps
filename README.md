@@ -45,6 +45,7 @@ Referencias
 - http://devdocs.io/
 - http://dochub.io/
 - Cheat Sheet: http://creativenauts.me/2014/02/08/cheat-sheet-web-development-design/
+- Presentacion del taller de  angular: http://francho.github.io/taller-intro-angular/
 
 Ejemplos
 --------
