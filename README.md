@@ -37,6 +37,8 @@ CSS
 - http://getbootstrap.com
 - http://foundation.zurb.com
 
+- Los Simpson dibujados con CSS: http://pattle.github.io/simpsons-in-css/
+
 Referencias
 -----------
 - http://devdocs.io/
@@ -68,3 +70,10 @@ Bibliografía recomendada (orientada a programación)
 - Indispensable, sobre buenas prácticas de programación (en general): http://www.amazon.es/Clean-code-Handbook-Software-Craftsmanship/dp/0132350882
 - La serie Head First por la forma en la que estan escritos (muy visuales): http://www.amazon.es/s/ref=nb_sb_noss_1?__mk_es_ES=%C3%85M%C3%85%C5%BD%C3%95%C3%91&url=search-alias%3Denglish-books&field-keywords=head%20first%20javascript&sprefix=head+%2Cenglish-books%2C365
 - Los de la editorial Pragmatic programmer también estan bastante bien: http://pragprog.com/categories/web20
+
+Aprender Online
+---------------
+- http://www.codecademy.com/learn
+- Mediante juegos:
+  - Code Combat – http://codecombat.com/
+  - Hakitzu – http://www.kuatostudios.com/games/hakitzu-elite/
