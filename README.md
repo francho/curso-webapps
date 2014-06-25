@@ -8,6 +8,7 @@ Herramientas
 ------------
 - Herramientas ie: http://loc.modern.ie/es-es/virtualization-tools
 - Validador W3C: validator.w3.org
+- CDN de Google: https://developers.google.com/speed/libraries/devguide
 
 Editores
 --------

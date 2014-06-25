@@ -13,7 +13,7 @@ TranviasApp.prototype = {
 
   elementoParada: function(datosParada) {
     var html = '<div class="parada">' +
-      '<h2>' + datosParada.title + '<h2>' +
+      '<h2>' + datosParada.title + '</h2>' +
       '<ul>';
     for(var x = 0; x <= datosParada.destinos.length; x++) {
       var destino = datosParada.destinos[x];
