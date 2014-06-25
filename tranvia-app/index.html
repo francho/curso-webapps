@@ -16,76 +16,20 @@
 <div id="paradas"></div>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="tranvias_app.js"></script>
 <script>
     /*
      * API info -> http://www.zaragoza.es/docs-api/#!/tranvia/listar_get_0
      */
 
-    function cargarParadas() {
-        var paradas = $('#paradas');
-        var loading = $('#progress');
-        var errores = $('#errores');
-        var query = encodeURIComponent($('#query').val());
-
-        if(query == '') {
-            return
-        }
-
-        loading.show();
-        errores.hide();
-
-        function elementoParada(datosParada) {
-            console.log(datosParada);
-            var html = '<div class="parada">' +
-                    '<h2>'+datosParada.title+'<h2>' +
-                    '<ul>';
-            for(var x=0; x<= datosParada.destinos.length; x++) {
-                var destino = datosParada.destinos[x];
-                if(!destino) { continue }
-                html += '<li>' +
-                        '<div class="linea">' + destino.linea + '</div>' +
-                        '<div class="destino">' + destino.destino + '</div>' +
-                        '<div class="minutos">' + destino.minutos + ' minutos</div>' +
-                        '</li>';
-            }
-
-            html += '</ul></div>';
-
-            return html;
-        }
-
-        $.ajax({
-            url     : 'http://www.zaragoza.es/api/recurso/urbanismo-infraestructuras/tranvia?start=0&rows=100&query=title%3D%22*' + query + '*%22&distance=500',
-            dataType: 'json',
-            success : function(data) {
-                paradas.html('');
-
-                if(data.totalCount) {
-                    jQuery.each(data['result'], function(index, poi) {
-                        paradas.append(elementoParada(poi));
-                    });
-
-                    setInterval(function() {
-                        cargarParadas(query);
-                    }, 30000);
-                } else {
-                    errores.html('no se han encontrado paradas');
-                    errores.show();
-                }
-
-                loading.hide();
-            },
-            error   : function(error) {
-                errores.html(error);
-                errores.show();
-                loading.hide();
-            }
-        });
-    }
-
     $(document).ready(function() {
+        var app = new TranviasApp();
+        app.init();
+
         $('#progress').hide();
-        $('#enviar').click(cargarParadas);
+        $('#enviar').click( function() {
+            app.cargarParadas();
+        });
     });
 </script>
 
