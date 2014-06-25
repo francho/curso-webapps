@@ -4,12 +4,11 @@
 
 angular.module('myApp.directives', [])
 .directive('fchPerro', function() {
-    console.log('in******');
   return {
-//    scope: {
-//      perro: '=fchData'
-//    },
-    template: 'perro'
-   // template: 'nombre: <b>{{ perro.nombre }}</b> raza: <i>{{perro.raza}}</i>'
+    restrict: 'E',
+    scope: {
+      perro: '=fchData'
+    },
+    templateUrl: 'views/fch-perro.html'
   }
 });

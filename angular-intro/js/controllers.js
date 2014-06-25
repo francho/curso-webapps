@@ -7,7 +7,7 @@
 angular.module('myApp.controllers', [])
   .controller('MainCtl', function($scope) {
 
-    $scope.nombre = "Juan";
+    $scope.nombre = '';
 
     $scope.perros = [
       { nombre: 'Lucas', raza: 'Schauzer' },
