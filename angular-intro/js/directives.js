@@ -9,6 +9,11 @@ angular.module('myApp.directives', [])
     scope: {
       perro: '=fchData'
     },
-    templateUrl: 'views/fch-perro.html'
+    templateUrl: 'views/fch-perro.html',
+    controller: function($scope) {
+      $scope.verRaza = function(raza) {
+        alert(raza);
+      }
+    }
   }
 });

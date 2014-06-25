@@ -1,3 +1,5 @@
-<b>{{perro.nombre}}</b>
-<br/>
-{{perro.raza}}
+<b ng-class="{ rojo: perro.edad>5 }">{{perro.nombre}}</b>
+<p ng-click="verRaza(perro.raza)" />{{perro.raza}}</p>
+<br/>{{perro.edad}}
+
+<img ng-src="{{perro.img}}" ng-if="perro.img">
