@@ -51,8 +51,9 @@ TranviasApp.prototype = {
   },
 
   programarRecarga: function() {
+    var self = this;
     setInterval(function() {
-      this.cargarParadas(query);
+      self.cargarParadas();
     }, 30000);
   },
 
