@@ -2,4 +2,13 @@
 
 <input type="text" ng-model="nombre">
 
-<p>Hola {{ nombre }}</p>
+<p>Buscando... {{ nombre|uppercase }}</p>
+
+<ul>
+    <li ng-repeat="perro in perros|filter:nombre|orderBy:'raza'">
+        <fch-perro fch-data="perro"></fch-perro>
+
+
+    </li>
+</ul>
+        {{perros}}

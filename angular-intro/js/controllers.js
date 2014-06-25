@@ -9,4 +9,11 @@ angular.module('myApp.controllers', [])
 
     $scope.nombre = "Juan";
 
+    $scope.perros = [
+      { nombre: 'Lucas', raza: 'Schauzer' },
+      { nombre: 'Frodo', raza: 'Bichon Habanero' },
+      { nombre: 'Trufa', raza: 'Pastor Aleman'}
+    ];
+
+
   });

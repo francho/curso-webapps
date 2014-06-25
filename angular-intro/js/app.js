@@ -6,13 +6,19 @@
 
 angular.module('myApp', [
   'ngRoute',
-  'myApp.controllers'
-]).config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/', {
-    controller : 'MainCtl',
-    templateUrl: 'views/main.html'
-  });
+  'myApp.controllers',
+  'myApp.directives'
+])
 
-  $routeProvider.otherwise({redirectTo: '/view1'});
+  .config(
+  ['$routeProvider',
+    function($routeProvider) {
+      $routeProvider
+        .when('/', {
+          controller : 'MainCtl',
+          templateUrl: 'views/main.html'
+        })
+        .otherwise({redirectTo: '/view1'});
 
-}]);
+    }]
+);
