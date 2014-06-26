@@ -3,7 +3,7 @@
  */
 
 function fizzBuzz(number) {
-  var result = '';
+  var result = 'Fizz';
 
   return result;
 }

@@ -93,3 +93,7 @@ Testing
 - Para enterarme de cuando hay una kata en Zaragoza: http://www.agile-aragon.org
 - Kata Fizz buzz online: http://www.codecademy.com/es/courses/fizzbuzz/0/1
 - Koans (Aprender Javascript a base de solucionar tests): http://javascript.didacto.net/
+
+FirefoxOS
+---------
+- App Manager (emulador): https://developer.mozilla.org/en-US/Firefox_OS/Using_the_App_Manager
