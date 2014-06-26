@@ -66,6 +66,7 @@ Bibliografía recomendada (orientada a diseño)
 - Guía de estilo iOS: https://developer.apple.com/library/ios/documentation/UserExperience/Conceptual/MobileHIG/
 
 - Herramienta de prototipado: http://pencil.evolus.vn/
+- La nueva guía de estilo de Android: http://www.google.com/design/spec/material-design/introduction.html#
 
 Bibliografía recomendada (orientada a programación)
 ---------------------------------------------------
@@ -79,3 +80,16 @@ Aprender Online
 - Mediante juegos:
   - Code Combat – http://codecombat.com/
   - Hakitzu – http://www.kuatostudios.com/games/hakitzu-elite/
+
+Node
+----
+- http://nodejs.org
+- servidor web sencillo: npm install -g http-server ; http-server
+
+Testing
+-------
+- Jasmine (librería de tests en javascript): http://jasmine.github.io/
+- Katas de ejemplo con soluciones: http://www.solveet.com/
+- Para enterarme de cuando hay una kata en Zaragoza: http://www.agile-aragon.org
+- Kata Fizz buzz online: http://www.codecademy.com/es/courses/fizzbuzz/0/1
+- Koans (Aprender Javascript a base de solucionar tests): http://javascript.didacto.net/
