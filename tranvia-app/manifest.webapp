@@ -1,0 +1,30 @@
+{
+  "version": "0.1",
+  "name": "Tranvias",
+  "description": "¿Cuando llega mi tranvia?",
+  "launch_path": "/index.html",
+  "icons": {
+    "16": "/img/icon-16.png",
+    "48": "/img/icon-48.png",
+    "128": "/img/icon-128.png"
+  },
+  "developer": {
+    "name": "francho",
+    "url": "http://francho.org"
+  },
+  "installs_allowed_from": [
+    "*"
+  ],
+  "locales": {
+    "es": {
+      "description": "¿cuando llega mi tranvia?",
+      "developer": {
+        "url": "http://francho.org/"
+      }
+    }
+  },
+  "default_locale": "es",
+  "permissions": {
+    "systemXHR": {}
+  }
+}
